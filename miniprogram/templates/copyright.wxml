@@ -1,0 +1,3 @@
+<template name="tempCopyright">
+<view>  Zycin © 2019 GeekBlog      </view>
+</template>

@@ -1,0 +1,106 @@
+<import src="../../templates/common-list.wxml" />
+<import src="../../templates/copyright.wxml" />
+
+<!-- <form catchsubmit="formSubmit" catchreset="formReset" id="search-form">
+  <view class="search-pancel">
+    <input value="" id="search-input" name="input" confirm-type="search" class="search-input" placeholder="搜索你感兴趣的内容..." bindconfirm="formSubmit"></input>
+    <button class="search-button" form-type="submit" size="mini" plain="true">
+      <icon type="search" color="#959595" size="12" />
+    </button>
+  </view>
+</form> -->
+
+
+
+<!-- 首页幻灯片 -->
+<!-- <view class="index-header" style="display:{{displaySwiper}}">
+  <swiper class="index-swiper" indicator-dots="true" interval="10000" autoplay="true" indicator-color="rgba(255, 255, 255, .2)" indicator-active-color="rgba(255, 255, 255, .7)">
+    <block wx:key="id" wx:for="{{postsList}}" wx:if="{{index<4}}">
+      <swiper-item id="{{item._id}}" index="{{index}}"  bindtap="redictDetail">
+        <image class="itemImg" mode="aspectFill" src="{{item.feature}}" style="width:95%" />
+        <view class="swiper-mask"></view>
+        <view class="swiper-desc">
+          <text>{{item.title}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view> -->
+
+
+<view class="showerror" style="display:none">
+  <image src="../../images/cry80.png" style="height:100rpx;width:100rpx"></image>
+  <view class="errortext">
+    暂时无法访问网络,下拉重试...
+  </view>
+</view>
+
+<view>
+
+  <!-- 首页搜索框 -->
+
+  <!-- <form catchsubmit="formSubmit" catchreset="formReset" id="search-form">
+    <view class="search-pancel">
+      <input value="" id="search-input" name="input" confirm-type="search" class="search-input" placeholder="搜索你感兴趣的内容..." bindconfirm="formSubmit"></input>
+      <button class="search-button" form-type="submit" size="mini" plain="true">
+        <icon type="search" color="#959595" size="12" />
+      </button>
+    </view>
+  </form> -->
+
+  <!--图标导航-->
+  <view class="container">
+    <view class="cms-tit">
+      <view class="cms-tit-left"></view>
+      <view class="cms-tit-txt">猜你想看</view>
+      <view class="cms-tit-more" data-foodlink="yeehee"> </view>
+    </view>
+    <view class='top-Nav2'>
+      <navigator url="../../pages/list/list?id=node" hover-class='none'>
+        <view class='.top-Nav2-item'>
+          <image src='../../images/Nodejs.png'></image>
+          <text>Node</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/list/list?id=vue" hover-class='none'>
+        <view class='.top-Nav2-item'>
+          <image src='../../images/Vue.png'></image>
+          <text>Vue</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/list/list?id=react" hover-class='none'>
+        <view class='.top-Nav2-item'>
+          <image src='../../images/React.png'></image>
+          <text>React</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/list/list?id=markdown" hover-class='none'>
+        <view class='.top-Nav2-item'>
+          <image src='../../images/markdown.png'></image>
+          <text>Mark</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view class="container">
+    <view class="cms-tit">
+      <view class="cms-tit-left"></view>
+      <view class="cms-tit-txt">最新文章</view>
+    </view>
+    <!-- 加载图文列表 -->
+    <view class="index-container">
+      <template is="tempCommonList" data="{{postsList}}" />
+      <view class="loadingmore">
+        <view hidden="{{isLastPage}}">
+          <button class="more-button" formType="submit" size="mini" bindtap="loadMore">加载更多...</button>
+        </view>
+        <view class="no-more" hidden="{{!isLastPage}}">- 无更多文章 -</view>
+      </view>
+      <view class="copyright">
+        <template is="tempCopyright" />
+      </view>
+    </view>
+  </view>
+</view>

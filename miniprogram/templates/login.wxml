@@ -1,0 +1,14 @@
+<!--templates/login.wxml-->
+
+<template name="login">
+    <block wx:if="{{!isLogin}}">
+        <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+            <view class="login-inner">
+                <image class="avatar" src="../../images/gravatar.png"></image>
+                <view class="username">
+                    <text>请点击登录</text>
+                </view>
+            </view>
+        </button>
+    </block>
+</template>

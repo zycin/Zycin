@@ -1,0 +1,52 @@
+<import src="../../templates/copyright.wxml" />
+<import src="../../templates/login-popup.wxml" />
+
+<view class="readlog-container">
+
+
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </button>
+    
+  </view>
+
+  <!-- <view class='user-cell'>
+    <van-cell-group>
+      <van-cell title="热门排行" is-link url="../hot/hot" />
+      <van-cell title="最近浏览" is-link url="../readlog/readlog" />
+    </van-cell-group>
+  </view>
+  <view class='user-cell'>
+    <van-cell-group>
+      <van-cell title="联系作者" is-link/>
+      <button class="contact-button" open-type="contact"></button>
+    </van-cell-group>
+  </view>-->
+
+<view class="user-cell">
+  <view class="user_edit_con">
+    <navigator url="../detail/detail?id=about">
+      <view class="user_edit_li">
+        <view class="user_edit_li_title">
+          <text class="fr grey">关于作者</text>
+          <image src='../../images/jiantou.png' class='icon'></image>
+        </view>
+      </view>
+    </navigator>
+    <view class="user_edit_li" bindtap='clearStorage'>
+        <view class="user_edit_li_title">
+          <text class="fr grey">清除缓存</text>
+          <image src='../../images/jiantou.png' class='icon'></image>
+        </view>
+      </view>
+  </view>
+</view>
+
+
+    <!-- <template is="login-popup" data="{{show: isLoginPopup}}"></template> -->
+  <view class="copyright">
+    <template is="tempCopyright" />
+  </view>
+</view>

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/tags/tags",
+    "pages/detail/detail",
+    "pages/list/list"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#6082BB",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#9BABBA",
+    "selectedColor": "#6082BB",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tar-home.png",
+        "selectedIconPath": "images/tar-home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tags/tags",
+        "iconPath": "images/tar-topic.png",
+        "selectedIconPath": "images/tar-topic-on.png",
+        "text": "标签"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/tar-person.png",
+        "selectedIconPath": "images/tar-person-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
